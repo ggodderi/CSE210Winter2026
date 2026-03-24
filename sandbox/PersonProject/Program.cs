@@ -3,7 +3,9 @@
 
     public static void ProcessPerson(Person person)
     {
-        Console.WriteLine(person.GetPersonInformation());
+        Console.Write(person.GetPersonInformation());
+
+        Console.WriteLine($", My Salary is: {person.GetSalary()}");
 
         // if (person is Police police)
         // {
@@ -21,7 +23,7 @@
     }
     public static void Main(string[] args)
     {
-        Person person = new Person("Bob", "Ross", 55, 195);
+        // Person person = new Person("Bob", "Ross", 55, 195);
 
         // Console.WriteLine(person.GetPersonInformation());
 
@@ -44,10 +46,13 @@
 
 
         List<Person> myPeople = new List<Person>();
-        myPeople.Add(person);
+        // myPeople.Add(person);
         myPeople.Add(myDoctor);
         myPeople.Add(myDoctor2);
         myPeople.Add(myPolice);
+
+        myDoctor.SetSalary(23424234.0);
+        myDoctor2.SetSalary(2398435.0);
 
         foreach(Person tempPerson in myPeople)
         {
