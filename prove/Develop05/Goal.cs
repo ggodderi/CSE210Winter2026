@@ -22,8 +22,21 @@ class Goal
         _name = Console.ReadLine();
     }
 
+    public void SetDescription()
+    {
+        Console.Write("Please the enter description of your goal: ");
+        _description = Console.ReadLine();
+    }
+
+    public void SetPoints()
+    {
+        Console.Write("Please the enter Points for your goal: ");
+        _numberOfPoints = int.Parse(Console.ReadLine());
+    }
+ 
     public virtual string GetConsoleString()
     {
-        return $"Goal Information: {_name}";
+        return $"Goal Information: {_name}, {_description}, {_numberOfPoints}";
     }
+
 }
