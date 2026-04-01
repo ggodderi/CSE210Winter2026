@@ -11,7 +11,7 @@ class Vector2D
         this.Y = y;
     }
 
-    private double VectorMagnitude => (X * X) + (Y * Y);
+    private double VectorMagnitude => Math.Sqrt((X * X) + (Y * Y));
 
     public static Vector2D operator +(Vector2D v1, Vector2D v2)
     {
@@ -45,9 +45,10 @@ class Vector2D
 
     public static Vector2D operator ++(Vector2D v1)
     {
-        v1.X += 1;
-        v1.Y += 1;
-        return v1;
+        return new Vector2D(v1.X + 1, v1.Y + 1);
+        // v1.X += 1;
+        // v1.Y += 1;
+        // return v1;
     }
 
 
